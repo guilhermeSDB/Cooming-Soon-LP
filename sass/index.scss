@@ -1,0 +1,159 @@
+@import 'global';
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    font-family: $JosefinSans;
+    font-size: 16px;    
+    color: $DesaturatedRed;
+    background: url(../images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover;
+    main{
+
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "a c"
+            "b c"
+            "b c";
+        
+
+        @media (max-width: 375px) { 
+            grid-template-columns: 1fr; 
+            grid-template-areas: 
+            "a"
+            "c"
+            "b";
+        }
+
+        
+        header{  
+            margin-bottom: 3rem;      
+            display: flex;
+            align-items: center;   
+            padding: 2rem 20rem;
+            grid-area: a;
+                   
+
+            @media (max-width: 375px) { padding: 1.5rem; margin: 0; width: 80vw; order: 2; margin: 0;}
+
+            img{
+
+                width: 200px;
+                @media (max-width: 375px) { width: 100px;}
+            }
+            
+        }
+
+        section#content{    
+            display: flex;
+            flex-direction: column;  
+            padding: 5rem 25rem 5rem 20rem;  
+            font-weight: 400;
+            letter-spacing: .5px;            
+            line-height: 26px;
+            grid-area: b;
+
+            @media (max-width: 375px) { padding: 0; order: 3; text-align: center; font-size: .9rem;}
+
+
+            h1{
+                
+                text-transform: uppercase;
+                letter-spacing: 18px;
+                font-size: 4rem;
+                font-weight: 300;
+                color: $DesaturatedRed;
+                line-height: 68px;
+                
+                @media (max-width: 375px) { font-size: 2rem; line-height: 40px; text-align: center; letter-spacing: 10px; padding: 1rem 0; margin: 0;}
+                span{
+                    font-weight: 600;
+                    color: $DarkGrayishRed
+                }
+            }
+
+            div.inputBtn{              
+                margin: 2rem 0;
+
+                input{
+                    width: 100%;
+                    border: 1px solid $DarkGrayishRed;               
+                    padding: 1rem 1.3rem;
+                    border-radius: 25px;
+                    background: transparent;
+                    color: $DarkGrayishRed;
+                    transition: 0.5s;
+                    font-weight: 600;
+
+                    &::placeholder{
+                        color: $DarkGrayishRed;
+                    }
+                    
+                    &:focus{
+                        outline: none!important;                        
+                    }
+
+                    @media (max-width: 375px) { width: -webkit-fill-available; margin: 0 2rem; padding: 1rem 6rem 1rem 1.3rem;}
+                }
+
+                button{
+                    position: relative;
+                    bottom: 32%;
+                    left: 97%;
+                    padding: 1rem 2.5rem;
+                    background: $Gradient2;
+                    border-radius: 30px;
+                    border: none;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    &:hover{
+                        -webkit-box-shadow: 0px 15px 27px 5px $DesaturatedRed; 
+                        box-shadow: 0px 15px 27px 5px $DesaturatedRed;
+                    }
+
+                    @media (max-width: 375px){ bottom: 3.3rem; left: 35%; }
+
+                }
+
+                img.imgError{
+                    visibility: hidden;
+                    position: relative;
+                    bottom: 30%;
+                    left: 74%;
+
+                    @media (max-width: 375px) { left: 0%; bottom: 3rem;}
+                }
+
+                p{
+                    visibility: hidden;
+                    color: $SoftRed;
+                    position: relative;
+                    bottom: 3.5rem;
+                    left: 1.2rem;   
+                    
+                    @media (max-width: 375px){ bottom: 3rem; left: 0; }
+                }
+            }
+
+          
+
+            
+        }
+
+        section#imgBackground{
+            background-position: center;
+            background-image: url('../images/hero-desktop.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            grid-area: c;
+           
+            @media (max-width: 375px) { height: 35vh; order: 2; background-image: url(../images/hero-mobile.jpg); background-size:cover; background-position: top;}
+        }
+    }
+}
