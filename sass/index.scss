@@ -5,15 +5,19 @@ body{
     margin: 0;
     padding: 0;
     max-width: 100vw;
+    height: 100%;
     font-family: $JosefinSans;
     font-size: 16px;    
     color: $DesaturatedRed;
     background: url(../images/bg-pattern-desktop.svg) no-repeat;
     background-size: cover;
+
+    @media (max-width: 1444px){ height: 100vh; overflow: hidden; }
+
     main{
 
         width: 100vw;
-        height: 100vh;
+        
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-areas: 
@@ -38,7 +42,7 @@ body{
             padding: 2rem 20rem;
             grid-area: a;
 
-            @media (max-width: 1444px){ padding: 2rem 10rem; }
+            @media (max-width: 1444px){ padding: 2rem 8rem; margin-bottom: 0;}
                    
 
             @media (max-width: 375px) { padding: 1.5rem; margin: 0; width: 80vw; order: 2; margin: 0;}
@@ -60,7 +64,7 @@ body{
             line-height: 26px;
             grid-area: b;
 
-            @media (max-width: 1444px){ padding: 5rem 8rem 5rem 8rem; }
+            @media (max-width: 1444px){ padding: 0rem 8rem}
 
             @media (max-width: 375px) { padding: 0; order: 3; text-align: center; font-size: .9rem;}
 
@@ -101,6 +105,7 @@ body{
                     &:focus{
                         outline: none!important;                        
                     }
+                    @media (max-width: 1444px){ width: 50%;}
 
                     @media (max-width: 375px) { width: -webkit-fill-available; margin: 0 2rem; padding: 1rem 6rem 1rem 1.3rem;}
                 }
@@ -133,7 +138,7 @@ body{
                     bottom: 3.1rem;
                     left: 26rem;
 
-                    @media (max-width: 1444px){ bottom: 3rem; left: 29rem; }   
+                    @media (max-width: 1444px){ bottom: 3rem; left: 29rem; margin: 0;}   
 
                     @media (max-width: 375px) { left: 0%; bottom: 3rem;}
                 }
@@ -144,6 +149,8 @@ body{
                     position: relative;
                     bottom: 3.5rem;
                     left: 1.2rem;   
+
+                    @media (max-width: 1444px){ bottom: 3rem; left: 29rem; margin: 0;}   
                     
                     @media (max-width: 375px){ bottom: 3rem; left: 0; }
                 }
@@ -163,5 +170,12 @@ body{
            
             @media (max-width: 375px) { height: 35vh; order: 2; background-image: url(../images/hero-mobile.jpg); background-size:cover; background-position: top;}
         }
+
+        p.attribution{
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
     }
+   
 }
