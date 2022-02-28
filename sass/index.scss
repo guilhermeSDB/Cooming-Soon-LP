@@ -126,7 +126,7 @@ body{
                         box-shadow: 0px 15px 27px 5px $DesaturatedRed;
                     }   
 
-                    @media (max-width: 1444px){ bottom: 3.3rem;}         
+                    @media (max-width: 1444px){ bottom: -0.2rem;left: -3rem;}         
 
                     @media (max-width: 375px){ bottom: 3.3rem; left: 35%; }
 
@@ -138,7 +138,7 @@ body{
                     bottom: 3.1rem;
                     left: 26rem;
 
-                    @media (max-width: 1444px){ bottom: 3rem; left: 29rem; margin: 0;}   
+                    @media (max-width: 1444px){ bottom: -0.5rem; left: -11rem; margin: 0;}   
 
                     @media (max-width: 375px) { left: 0%; bottom: 3rem;}
                 }
@@ -150,7 +150,7 @@ body{
                     bottom: 3.5rem;
                     left: 1.2rem;   
 
-                    @media (max-width: 1444px){ bottom: 3rem; left: 29rem; margin: 0;}   
+                    @media (max-width: 1444px){ bottom: -1rem; left: 1rem; margin: 0;}   
                     
                     @media (max-width: 375px){ bottom: 3rem; left: 0; }
                 }

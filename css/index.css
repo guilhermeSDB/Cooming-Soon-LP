@@ -155,7 +155,8 @@ body main section#content div.inputBtn button:hover {
 }
 @media (max-width: 1444px) {
   body main section#content div.inputBtn button {
-    bottom: 3.3rem;
+    bottom: -0.2rem;
+    left: -3rem;
   }
 }
 @media (max-width: 375px) {
@@ -172,8 +173,8 @@ body main section#content div.inputBtn img.imgError {
 }
 @media (max-width: 1444px) {
   body main section#content div.inputBtn img.imgError {
-    bottom: 3rem;
-    left: 29rem;
+    bottom: -0.5rem;
+    left: -11rem;
     margin: 0;
   }
 }
@@ -192,8 +193,8 @@ body main section#content div.inputBtn p {
 }
 @media (max-width: 1444px) {
   body main section#content div.inputBtn p {
-    bottom: 3rem;
-    left: 29rem;
+    bottom: -1rem;
+    left: 1rem;
     margin: 0;
   }
 }
