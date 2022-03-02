@@ -10,6 +10,8 @@ body{
     color: $DesaturatedRed;
     background: url(../images/bg-pattern-desktop.svg) no-repeat;
     background-size: cover;
+    overflow-y: hidden;
+
     main{
 
         width: 100vw;
@@ -35,7 +37,8 @@ body{
             margin-bottom: 3rem;      
             display: flex;
             align-items: center;   
-            padding: 2rem 20rem;
+            padding: 3rem 20rem;
+            margin-top: 6rem;
             grid-area: a;
 
             @media (max-width: 1444px){ padding: 2rem 10rem; }
@@ -54,7 +57,7 @@ body{
         section#content{    
             display: flex;
             flex-direction: column;  
-            padding: 5rem 25rem 5rem 20rem;  
+            padding: 0rem 25rem 5rem 20rem;  
             font-weight: 400;
             letter-spacing: .5px;            
             line-height: 26px;
