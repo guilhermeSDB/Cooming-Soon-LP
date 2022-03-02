@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100vw;
+  height: 100%;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   color: #ce9797;
@@ -10,9 +11,14 @@ body {
   background-size: cover;
   overflow-y: hidden;
 }
+@media (max-width: 1444px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
 body main {
   width: 100vw;
-  height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas: "a c" "b c" "b c";
@@ -33,7 +39,8 @@ body main header {
 }
 @media (max-width: 1444px) {
   body main header {
-    padding: 2rem 10rem;
+    padding: 2rem 8rem;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 375px) {
@@ -64,7 +71,7 @@ body main section#content {
 }
 @media (max-width: 1444px) {
   body main section#content {
-    padding: 5rem 8rem 5rem 8rem;
+    padding: 0rem 8rem;
   }
 }
 @media (max-width: 375px) {
@@ -122,6 +129,11 @@ body main section#content div.inputBtn input::placeholder {
 body main section#content div.inputBtn input:focus {
   outline: none !important;
 }
+@media (max-width: 1444px) {
+  body main section#content div.inputBtn input {
+    width: 50%;
+  }
+}
 @media (max-width: 375px) {
   body main section#content div.inputBtn input {
     width: -webkit-fill-available;
@@ -145,7 +157,8 @@ body main section#content div.inputBtn button:hover {
 }
 @media (max-width: 1444px) {
   body main section#content div.inputBtn button {
-    bottom: 3.3rem;
+    bottom: -0.2rem;
+    left: -3rem;
   }
 }
 @media (max-width: 375px) {
@@ -162,8 +175,9 @@ body main section#content div.inputBtn img.imgError {
 }
 @media (max-width: 1444px) {
   body main section#content div.inputBtn img.imgError {
-    bottom: 3rem;
-    left: 29rem;
+    bottom: -0.5rem;
+    left: -11rem;
+    margin: 0;
   }
 }
 @media (max-width: 375px) {
@@ -178,6 +192,13 @@ body main section#content div.inputBtn p {
   position: relative;
   bottom: 3.5rem;
   left: 1.2rem;
+}
+@media (max-width: 1444px) {
+  body main section#content div.inputBtn p {
+    bottom: -1rem;
+    left: 1rem;
+    margin: 0;
+  }
 }
 @media (max-width: 375px) {
   body main section#content div.inputBtn p {
@@ -200,4 +221,9 @@ body main section#imgBackground {
     background-size: cover;
     background-position: top;
   }
+}
+body main p.attribution {
+  text-align: center;
+  position: relative;
+  bottom: 0;
 }
